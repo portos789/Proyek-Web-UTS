@@ -15,6 +15,10 @@ body {
     background: #f7faff;
 }
 
+/* =========================================
+   HEADER & NAVBAR
+   ========================================= */
+
 .site-header {
     display: flex;
     align-items: center;
@@ -47,28 +51,6 @@ body {
     padding: 4px;
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.logo-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.logo-subtitle {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.78);
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .main-nav {
     display: flex;
     justify-content: flex-start;
@@ -91,84 +73,6 @@ body {
 .main-nav a:focus-visible {
     color: #ffd100;
     opacity: 0.88;
-}
-
-.search-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,0.1);
-    padding: 8px 10px;
-    border-radius: 999px;
-}
-
-.search-form input {
-    border: none;
-    outline: none;
-    background: transparent;
-    color: #ffffff;
-    width: 160px;
-    font-size: 0.95rem;
-}
-
-.search-form input::placeholder {
-    color: rgba(255,255,255,0.72);
-}
-
-.search-form button {
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.12);
-    color: #ffffff;
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.search-form button:hover,
-.search-form button:focus-visible {
-    background: #ffd100;
-    color: #0b234d;
-    border-color: #ffd100;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.page-content {
-    padding: 42px 28px;
-}
-
-.hero {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 48px 32px;
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
-}
-
-.hero h1 {
-    margin: 0 0 14px;
-    font-size: clamp(2rem, 2.5vw, 2.8rem);
-    letter-spacing: -0.04em;
-}
-
-.hero p {
-    margin: 0;
-    color: #334155;
-    font-size: 1rem;
 }
 
 /* =========================================
@@ -255,4 +159,205 @@ body {
 
 .dropdown:hover .arrow {
     transform: rotate(180deg);
+}
+
+/* =========================================
+   SEARCH FORM
+   ========================================= */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 10px;
+    border-radius: 999px;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    width: 160px;
+    font-size: 0.95rem;
+}
+
+.search-form input::placeholder {
+    color: rgba(255,255,255,0.72);
+}
+
+.search-form button {
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.search-form button:hover,
+.search-form button:focus-visible {
+    background: #ffd100;
+    color: #0b234d;
+    border-color: #ffd100;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* =========================================
+   HERO GRID LAYOUT (Kiri Besar, Kanan 2 Susun)
+   ========================================= */
+
+.page-content {
+    padding: 42px 28px;
+}
+
+.hero-grid-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    max-width: 1280px; 
+    margin: 0 auto;    
+}
+
+.hero-main-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    min-height: 500px;
+}
+
+.main-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+.main-overlay-box {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(30, 41, 59, 0.85); 
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 40px 32px;
+    width: 75%; 
+    align-self: flex-end; 
+    border-radius: 0 16px 0 0; 
+}
+
+.main-overlay-box h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.02em;
+}
+
+.main-overlay-box p {
+    font-size: 1.05rem;
+    margin: 0 0 24px 0;
+    color: #e2e8f0;
+}
+
+.btn-yellow {
+    display: inline-block;
+    background-color: #ffd100;
+    color: #0b234d;
+    padding: 12px 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-yellow:hover {
+    background-color: #e6bd00;
+}
+
+.hero-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+}
+
+.sidebar-card {
+    background-color: #1e293b; 
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar-img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+}
+
+.sidebar-content {
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.sidebar-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.3rem;
+}
+
+.sidebar-content p {
+    margin: 0 0 20px 0;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    flex: 1; 
+}
+
+.link-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.link-arrow:hover {
+    color: #ffd100;
+}
+
+/* Responsif untuk Layar Kecil (HP/Tablet) */
+@media (max-width: 992px) {
+    .hero-grid-section {
+        grid-template-columns: 1fr; 
+    }
+    
+    .main-overlay-box {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .hero-main-card {
+        min-height: 400px;
+    }
 }
