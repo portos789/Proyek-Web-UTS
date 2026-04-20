@@ -87,6 +87,12 @@ body {
     transition: color 0.2s ease, opacity 0.2s ease;
 }
 
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #ffd100;
+    opacity: 0.88;
+}
+
 .search-form {
     display: flex;
     align-items: center;
@@ -140,12 +146,6 @@ body {
     overflow: hidden;
 }
 
-.main-nav a:hover,
-.main-nav a:focus-visible {
-    color: #ffd100;
-    opacity: 0.88;
-}
-
 .page-content {
     padding: 42px 28px;
 }
@@ -169,4 +169,90 @@ body {
     margin: 0;
     color: #334155;
     font-size: 1rem;
+}
+
+/* =========================================
+   PENGATURAN DROPDOWN NAVBAR
+   ========================================= */
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e293b;
+    min-width: 280px;
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 16px 0;
+    margin-top: 12px;
+    z-index: 100;
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+
+.dropdown-title {
+    display: block;
+    padding: 8px 24px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 8px;
+}
+
+.main-nav .dropdown-content a {
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav .dropdown-content a::after {
+    content: "›";
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 0;
+}
+
+.main-nav .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffd100;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
 }
