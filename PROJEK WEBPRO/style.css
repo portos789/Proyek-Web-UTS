@@ -465,9 +465,9 @@ body {
 
 .help-btn {
     flex: 1; 
-    background-color: #1f2937; /* Latar gelap default */
-    color: #ffd100; /* Teks kuning default */
-    border: 1px solid transparent; /* Border transparan default */
+    background-color: #1f2937;
+    color: #ffd100; 
+    border: 1px solid transparent; 
     text-decoration: none;
     padding: 18px 24px;
     border-radius: 8px;
@@ -476,15 +476,13 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    /* Transisi mulus untuk perubahan warna dan border */
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-/* EFEK HOVER: Sesuai gambar referensi */
 .help-btn:hover {
-    background-color: transparent; /* Latar menjadi transparan agar tembus pandang ke warna kuning container */
-    color: #1f2937; /* Warna teks menjadi gelap */
-    border-color: #1f2937; /* Muncul garis tepi (border) gelap */
+    background-color: transparent; 
+    color: #1f2937; 
+    border-color: #1f2937; 
 }
 
 .help-icon {
