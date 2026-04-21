@@ -1,3 +1,6 @@
+/* =========================================================================
+   1. PENGATURAN DASAR (ROOT & BODY)
+========================================================================= */
 :root {
     color-scheme: light;
     font-family: "Inter", "Segoe UI", sans-serif;
@@ -15,10 +18,10 @@ body {
     background: #f7faff;
 }
 
-/* =========================================
-   HEADER & NAVBAR
-   ========================================= */
 
+/* =========================================================================
+   2. HEADER & NAVBAR (MENU ATAS)
+========================================================================= */
 .site-header {
     display: flex;
     align-items: center;
@@ -75,10 +78,10 @@ body {
     opacity: 0.88;
 }
 
-/* =========================================
-   PENGATURAN DROPDOWN NAVBAR
-   ========================================= */
 
+/* =========================================================================
+   3. DROPDOWN MENU
+========================================================================= */
 .dropdown {
     position: relative;
     display: flex;
@@ -161,10 +164,10 @@ body {
     transform: rotate(180deg);
 }
 
-/* =========================================
-   SEARCH FORM
-   ========================================= */
 
+/* =========================================================================
+   4. FORM PENCARIAN (KOLOM CARI)
+========================================================================= */
 .search-form {
     display: flex;
     align-items: center;
@@ -212,16 +215,13 @@ body {
     margin: -1px;
     border: 0;
     padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
-/* =========================================
-   HERO GRID LAYOUT (Kiri Besar, Kanan 2 Susun)
-   ========================================= */
 
+/* =========================================================================
+   5. HERO SECTION (KOTAK BESAR & 2 KOTAK KECIL)
+========================================================================= */
 .page-content {
     padding: 42px 28px;
 }
@@ -305,6 +305,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.sidebar-card:hover {
+    transform: translateY(-12px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
 }
 
 .sidebar-img {
@@ -346,18 +352,177 @@ body {
     color: #ffd100;
 }
 
-/* Responsif untuk Layar Kecil (HP/Tablet) */
+
+/* =========================================================================
+   6. FEATURED CONTENT (4 KARTU TENGAH)
+========================================================================= */
+.featured-section {
+    background-color: #111827; 
+    padding: 60px 28px;
+    color: #ffffff;
+}
+
+.featured-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.featured-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 40px 0;
+    font-weight: 700;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px;
+}
+
+.featured-card {
+    background-color: #1f2937; 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.featured-card:hover {
+    transform: translateY(-12px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+}
+
+.featured-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.featured-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+}
+
+.featured-content p {
+    font-size: 0.9rem;
+    color: #9ca3af; 
+    margin: 0 0 24px 0;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.featured-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: right; 
+    transition: color 0.2s ease;
+}
+
+.featured-link:hover {
+    color: #ffd100; 
+}
+
+
+/* =========================================================================
+   7. HOW CAN WE HELP? (KOTAK KUNING BAWAH DENGAN HOVER TRANSPARAN)
+========================================================================= */
+.help-section {
+    background-color: #111827; 
+    padding: 20px 28px 80px 28px; 
+}
+
+.help-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.help-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin: 0 0 24px 0;
+    font-weight: 700;
+}
+
+.help-yellow-box {
+    background-color: #ffd100;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.help-btn {
+    flex: 1; 
+    background-color: #1f2937; /* Latar gelap default */
+    color: #ffd100; /* Teks kuning default */
+    border: 1px solid transparent; /* Border transparan default */
+    text-decoration: none;
+    padding: 18px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Transisi mulus untuk perubahan warna dan border */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* EFEK HOVER: Sesuai gambar referensi */
+.help-btn:hover {
+    background-color: transparent; /* Latar menjadi transparan agar tembus pandang ke warna kuning container */
+    color: #1f2937; /* Warna teks menjadi gelap */
+    border-color: #1f2937; /* Muncul garis tepi (border) gelap */
+}
+
+.help-icon {
+    font-size: 1.3rem; 
+}
+
+
+/* =========================================================================
+   8. PENGATURAN RESPONSIVE (UNTUK HP & TABLET)
+========================================================================= */
+@media (max-width: 1024px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
 @media (max-width: 992px) {
     .hero-grid-section {
         grid-template-columns: 1fr; 
     }
-    
     .main-overlay-box {
         width: 100%;
         border-radius: 0;
     }
-    
     .hero-main-card {
         min-height: 400px;
+    }
+    .help-yellow-box {
+        flex-direction: column;
+    }
+    .help-btn {
+        width: 100%; 
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-grid {
+        grid-template-columns: 1fr; 
     }
 }
