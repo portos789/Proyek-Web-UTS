@@ -26,7 +26,6 @@ body {
     color: #ffd100 !important;
 }
 
-/* Kustomisasi input pencarian agar latar belakangnya agak transparan */
 .search-form-custom {
     background-color: rgba(255, 255, 255, 0.1);
     min-width: 220px;
@@ -35,7 +34,6 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Kustomisasi Dropdown ala Bootstrap agar bergaya korporat */
 .custom-dropdown {
     background-color: #1e293b;
     border: none;
@@ -62,7 +60,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
-/* Kotak gelap melengkung di hero image */
+
 .rounded-top-end-4 {
     border-top-right-radius: 1rem !important;
 }
@@ -70,7 +68,6 @@ body {
     backdrop-filter: blur(8px);
 }
 
-/* Gambar untuk card kecil dan featured content */
 .card-img-sm {
     height: 180px;
     object-fit: cover;
@@ -83,7 +80,6 @@ body {
 /* =========================================
    ANIMASI & EFEK HOVER KUSTOM
 ========================================= */
-/* Efek kartu melayang */
 .hover-float {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -92,7 +88,6 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Teks link berubah kuning saat di-hover */
 .link-hover-warning {
     transition: color 0.2s ease;
 }
@@ -100,7 +95,6 @@ body {
     color: #ffd100 !important;
 }
 
-/* Efek tombol di kotak kuning bantuan */
 .help-btn-custom {
     background-color: #1f2937;
     color: #ffd100;
@@ -111,4 +105,24 @@ body {
     background-color: transparent !important;
     color: #1f2937 !important;
     border-color: #1f2937 !important;
+}
+
+/* =========================================
+   FOOTER 
+========================================= */
+.footer-custom {
+    background-color: #111827; 
+    color: #ffffff;
+}
+
+.footer-link {
+    color: #d1d5db; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
