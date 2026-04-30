@@ -1,31 +1,59 @@
 /* =========================================
-   PENGATURAN DASAR & WARNA KHUSUS
+   1. PENGATURAN DASAR & WARNA KHUSUS
+   Mengatur font global dan mendefinisikan warna utama
 ========================================= */
 body {
     font-family: "Inter", "Segoe UI", sans-serif;
 }
 
+/* Kustomisasi warna background dari class bawaan Bootstrap */
 .bg-light { background-color: #f7faff !important; }
 .bg-gray-900 { background-color: #111827 !important; }
 .bg-gray-800 { background-color: #1f2937 !important; }
 
-/* Lebar maksimal kontainer disamakan dengan desain sebelumnya */
+/* Menjaga lebar maksimal konten web agar tidak melebar berlebihan di monitor besar */
 .max-w-custom {
     max-width: 1280px;
 }
 
 /* =========================================
-   NAVBAR & PENCARIAN
+   2. PENGATURAN SCROLL OTOMATIS (ANCHOR LINKS)
+   Fitur auto-scroll saat link pada dropdown "Tentang Kami" di-klik
 ========================================= */
+html {
+    scroll-behavior: smooth; /* Membuat animasi perpindahan halaman mulus seperti meluncur */
+}
+
+/* Memberikan jarak atas saat auto-scroll agar judul section tidak tertutup oleh navbar yang posisinya melayang (fixed-top) */
+.scroll-mt {
+    scroll-margin-top: 120px; 
+}
+
+/* =========================================
+   3. NAVBAR & PENCARIAN
+   Mengatur tampilan visual navbar dan dropdown
+========================================= */
+/* Warna biru gelap khas perusahaan */
 .custom-navbar {
     background-color: #0b234d;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Memastikan navbar selalu melayang di posisi paling atas layar saat di-scroll */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Warna link navbar berubah menjadi kuning saat kursor diarahkan (hover) */
 .nav-hover:hover {
     color: #ffd100 !important;
 }
 
+/* Membuat form pencarian transparan dan mengatur placeholder (teks bayangan) */
 .search-form-custom {
     background-color: rgba(255, 255, 255, 0.1);
     min-width: 220px;
@@ -34,6 +62,7 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Mengubah tampilan dropdown bawaan Bootstrap menjadi kotak gelap ala korporat */
 .custom-dropdown {
     background-color: #1e293b;
     border: none;
@@ -51,8 +80,10 @@ body {
 }
 
 /* =========================================
-   UKURAN GAMBAR (IMAGE FITTING)
+   4. UKURAN GAMBAR (IMAGE FITTING) & KOTAK
+   Memastikan semua gambar di berbagai komponen tidak gepeng
 ========================================= */
+/* Tinggi minimal untuk gambar besar di Halaman Utama (Home) */
 .hero-main-card {
     min-height: 500px;
 }
@@ -61,6 +92,12 @@ body {
     object-fit: cover;
 }
 
+/* Tinggi mutlak untuk gambar di halaman "Profil Perusahaan" */
+.custom-profile-img-box {
+    height: 450px; 
+}
+
+/* Menambahkan efek lengkungan hanya di sudut kanan atas untuk kotak teks di atas gambar Hero */
 .rounded-top-end-4 {
     border-top-right-radius: 1rem !important;
 }
@@ -68,6 +105,7 @@ body {
     backdrop-filter: blur(8px);
 }
 
+/* Tinggi gambar untuk kartu kecil (Berita & Featured Content) */
 .card-img-sm {
     height: 180px;
     object-fit: cover;
@@ -78,8 +116,20 @@ body {
 }
 
 /* =========================================
-   ANIMASI & EFEK HOVER KUSTOM
+   5. EFEK KACA TRANSPARAN (GLASSMORPHISM)
+   Dipakai khusus untuk kotak teks penjelasan profil perusahaan
 ========================================= */
+.overlay-glass {
+    background-color: rgba(31, 41, 55, 0.9) !important; /* Warna abu-abu gelap dengan transparansi 90% */
+    backdrop-filter: blur(12px); /* Memburamkan background gambar yang ada di baliknya */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Garis outline sangat tipis */
+}
+
+/* =========================================
+   6. ANIMASI & EFEK HOVER KUSTOM
+   Untuk tombol, kartu konten, dan elemen interaktif lainnya
+========================================= */
+/* Mengangkat kartu ke atas dan menambah shadow besar saat di-hover */
 .hover-float {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -88,6 +138,7 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
+/* Teks link berubah kuning */
 .link-hover-warning {
     transition: color 0.2s ease;
 }
@@ -95,6 +146,7 @@ body {
     color: #ffd100 !important;
 }
 
+/* Tombol di dalam kotak kuning "Bagaimana kami bisa membantu?" */
 .help-btn-custom {
     background-color: #1f2937;
     color: #ffd100;
@@ -108,27 +160,87 @@ body {
 }
 
 /* =========================================
-   FOOTER 
+   7. TENTANG KAMI - VISI & MISI (ACCORDION)
+   Modifikasi total komponen Accordion menjadi gaya Card Outline
+========================================= */
+/* Membungkus setiap item accordion ke dalam bentuk kotak (Card) bergaris tepi */
+.custom-accordion .accordion-item {
+    background-color: #1e293b; /* Warna latar dasar gelap */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Garis tepi putih transparan tipis */
+    border-radius: 12px !important; /* Melengkungkan semua sudut kotak */
+    overflow: hidden; /* Mencegah isi kotak menembus sudut yang melengkung */
+    transition: background-color 0.3s ease; /* Transisi warna yang mulus */
+}
+
+/* Efek Hover untuk keseluruhan kotak item (Berubah jadi sedikit lebih terang) */
+.custom-accordion .accordion-item:hover {
+    background-color: #2a374a; 
+}
+
+/* Menghilangkan garis biru (outline) default dari Bootstrap saat tombol diklik */
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* Menyesuaikan tombol agar transparan dan menyatu dengan kotak pembungkusnya */
+.custom-accordion .accordion-button {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    padding: 1.25rem 1.5rem; /* Jarak ruang di dalam tombol */
+    font-size: 1.1rem;
+}
+
+/* Membalikkan warna ikon panah bawaan Bootstrap agar menjadi putih murni */
+.custom-accordion .accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    transition: transform 0.3s ease; /* Putaran panah mulus */
+}
+
+/* Mengatur ruang dan warna teks di dalam isi (body) Accordion */
+.custom-accordion .accordion-body {
+    background-color: transparent !important;
+    color: #d1d5db; /* Warna teks abu-abu terang */
+    padding: 0 1.5rem 1.5rem 1.5rem; /* Menghilangkan padding atas agar menempel dengan judul */
+    border-top: none; /* Menghapus garis pemisah bawaan Bootstrap */
+}
+
+/* =========================================
+   8. FOOTER
+   Mengatur tautan dan warna bagian paling bawah website
 ========================================= */
 .footer-custom {
     background-color: #111827; 
     color: #ffffff;
 }
 
+/* Gaya untuk link utama di kolom Footer */
 .footer-link {
     color: #d1d5db; 
     text-decoration: none;
     font-size: 0.95rem;
     transition: text-decoration 0.2s ease, color 0.2s ease;
 }
-
 .footer-link:hover {
     color: #ffffff;
     text-decoration: underline;
 }
 
+/* Gaya untuk link kecil di baris paling bawah */
+.footer-link-small {
+    color: #9ca3af; 
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+.footer-link-small:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* =========================================
-   NEWS CARDS
+   9. KARTU BERITA (HALAMAN BERITA)
 ========================================= */
 .news-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
