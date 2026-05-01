@@ -110,9 +110,9 @@ html {
     backdrop-filter: blur(8px);
 }
 
-/* Tinggi gambar untuk kartu kecil (Berita & Featured Content) */
+/* Tinggi gambar seragam untuk kartu kecil (Berita & Featured Content) */
 .card-img-sm {
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -132,13 +132,13 @@ html {
 
 /* Kustomisasi Form Input Tracking */
 .tracking-input:focus {
-    background-color: #111827 !important; /* Mencegah input jadi putih saat diklik */
+    background-color: #111827 !important; 
     color: white !important;
-    box-shadow: 0 0 0 0.25rem rgba(255, 209, 0, 0.25) !important; /* Efek glow kuning saat mengetik */
+    box-shadow: 0 0 0 0.25rem rgba(255, 209, 0, 0.25) !important; 
     border-color: #ffd100 !important;
 }
 .tracking-input::placeholder {
-    color: #6b7280; /* Warna placeholder abu-abu di input tracking */
+    color: #6b7280; 
 }
 
 /* =========================================
@@ -256,23 +256,17 @@ html {
 }
 
 /* =========================================
-   9. KARTU BERITA (HALAMAN BERITA)
+   9. KARTU BERITA
 ========================================= */
 .news-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 0.75rem;
-    overflow: hidden;
 }
-
 .news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-8px);
 }
-
 .news-card .card-img-top {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
-
 .news-card:hover .card-img-top {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Gambar sedikit membesar saat kartu di-hover */
 }
