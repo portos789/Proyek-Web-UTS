@@ -1,223 +1,382 @@
-<body>
-    <header class="site-header">
-        <div class="header-left">
-            <div class="brand">
-                <img src="Group 34.png" alt="Logo Vargo Logistics" class="logo-symbol">
-            </div>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="HOME.html">Halaman Utama</a>
-                
-                <div class="dropdown">
-                    <a href="tentang_kita.html" class="dropbtn">
-                        Tentang Kita <span class="arrow">&#9662;</span>
-                    </a>
-                    <div class="dropdown-content">
-                        <span class="dropdown-title">Go to: Tentang Kita</span>
-                        <a href="#">Vargo at a glance</a>
-                        <a href="#">Kepemimpinan</a>
-                        <a href="#">Nilai-nilai kami</a>
-                        <a href="#">Sejarah kami</a>
-                        <a href="#">Hubungi kami</a>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Kami - TKK Manufacture</title>
+    <!-- Link Bootstrap 5 CSS dari CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900">
 
-                <a href="karier.html">Karier</a>
+    <!-- ==========================================
+         HEADER & NAVBAR
+         ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3 px-3 px-md-4 fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Group 34.png" alt="Logo Perusahaan" width="48" height="48" class="bg-white rounded-3 p-1 me-3 object-fit-contain">
+                <span class="fw-bold fs-5 d-none d-sm-block">TKK Manufacture</span>
+            </a>
+
+            <!-- Tombol Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Navigasi -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 fw-bold gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-hover" href="index.html">Beranda</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white nav-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark custom-dropdown shadow-lg">
+                            <li><h6 class="dropdown-header border-bottom border-secondary mb-2 pb-2">Go to: Tentang Kami</h6></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="tentang_kami.html#profil">Profil Perusahaan <span>›</span></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="tentang_kami.html#visi-misi">Visi & Misi <span>›</span></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Fasilitas Produksi <span>›</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-warning nav-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan Kami
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark custom-dropdown shadow-lg">
+                            <li><h6 class="dropdown-header border-bottom border-secondary mb-2 pb-2">Go to: Layanan Kami</h6></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#lacak-paket">Lacak Paket <span>›</span></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#layanan-pengiriman">Layanan Pengiriman <span>›</span></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#faq">FAQ (Tanya Jawab) <span>›</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-white nav-hover" href="karier.html">Karier</a></li>
+                    <li class="nav-item"><a class="nav-link text-white nav-hover" href="berita.html">Berita Industri</a></li>
+                </ul>
                 
-                <div class="dropdown">
-                    <a href="Layanan_Kami.html" class="dropbtn">
-                        Layanan Kami <span class="arrow">&#9662;</span>
-                    </a>
-                    <div class="dropdown-content">
-                        <span class="dropdown-title">Go to: Layanan Kami</span>
-                        <a href="Layanan_Kami.html#lacak-paket">Lacak Paket</a>
-                        <a href="Layanan_Kami.html#layanan-pengiriman">Layanan Pengiriman</a>
-                    </div>
-                </div>
-                
-                <a href="berita.html">Berita</a>
+                <form class="d-flex search-form-custom rounded-pill p-1" role="search">
+                    <input class="form-control border-0 bg-transparent text-white shadow-none ps-3" type="search" placeholder="Cari..." aria-label="Search">
+                    <button class="btn btn-warning rounded-pill fw-bold px-3" type="submit">Cari</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="text-white mt-5 pt-5 pb-5 px-3 px-md-4">
+        
+        <!-- Breadcrumb -->
+        <div class="container-fluid max-w-custom mx-auto mb-4 scroll-mt">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-secondary text-decoration-none nav-hover">Beranda</a></li>
+                    <li class="breadcrumb-item active text-light" aria-current="page">Layanan Kami</li>
+                </ol>
             </nav>
         </div>
-        
-        <form class="search-form" action="#" role="search">
-            <label for="site-search" class="sr-only">Cari halaman</label>
-            <input id="site-search" type="search" name="q" placeholder="Cari..." aria-label="Cari" />
-            <button type="submit">Cari</button>
-        </form>
-    </header>
-    
-    <main class="page-content">
-        <h1>Layanan Kami</h1>
-        
-        <!-- Search Section for Package Tracking -->
-        <section class="tracking-section" id="lacak-paket">
-            <h2>Lacak Paket Anda</h2>
-            <p>Masukkan kode barang untuk melacak pengiriman Anda secara real-time</p>
-            <form class="tracking-form" action="#" method="POST">
-                <div class="search-input-group">
-                    <input 
-                        type="text" 
-                        id="tracking-code" 
-                        name="tracking-code" 
-                        placeholder="Masukkan kode barang (Contoh: VL-2026-001234)" 
-                        required
-                        aria-label="Kode barang"
-                    />
-                    <button type="submit" class="btn-track">Lacak Paket</button>
-                </div>
-                <p class="tracking-info">*Cek status pengiriman, lokasi, dan estimasi waktu tiba</p>
-            </form>
-        </section>
 
-        <!-- Services Options Section -->
-        <section class="services-section" id="layanan-pengiriman">
-            <h2>Pilih Layanan Pengiriman</h2>
-            <p>Kami menyediakan berbagai pilihan layanan sesuai kebutuhan dan budget Anda</p>
-            
-            <div class="services-grid">
-                <!-- Super Cepat Service -->
-                <div class="service-card service-super-cepat">
-                    <div class="service-header">
-                        <h3>Super Cepat</h3>
-                        <span class="service-badge">Tercepat</span>
-                    </div>
-                    <div class="service-timing">
-                        <p class="timing-label">Estimasi Waktu:</p>
-                        <p class="timing-value">1-2 Hari Kerja</p>
-                    </div>
-                    <div class="service-description">
-                        <h4>Layanan Mencakup:</h4>
-                        <ul>
-                            <li>Pengangkutan ekspres 24/7</li>
-                            <li>Prioritas handling & loading</li>
-                            <li>Tracking real-time GPS</li>
-                            <li>Asuransi penuh untuk barang</li>
-                            <li>Pengiriman garansi tepat waktu</li>
-                            <li>Customer service khusus</li>
-                        </ul>
-                    </div>
-                    <button class="btn-service btn-super-cepat">Pilih Layanan</button>
-                </div>
-
-                <!-- Cepat Service -->
-                <div class="service-card service-cepat">
-                    <div class="service-header">
-                        <h3>Cepat</h3>
-                        <span class="service-badge">Standar</span>
-                    </div>
-                    <div class="service-timing">
-                        <p class="timing-label">Estimasi Waktu:</p>
-                        <p class="timing-value">2-4 Hari Kerja</p>
-                    </div>
-                    <div class="service-description">
-                        <h4>Layanan Mencakup:</h4>
-                        <ul>
-                            <li>Pengangkutan cepat setiap hari</li>
-                            <li>Handling profesional</li>
-                            <li>Tracking melalui aplikasi & SMS</li>
-                            <li>Asuransi standar tersedia</li>
-                            <li>Notifikasi pengiriman otomatis</li>
-                            <li>Customer support responsif</li>
-                        </ul>
-                    </div>
-                    <button class="btn-service btn-cepat">Pilih Layanan</button>
-                </div>
-
-                <!-- Normal Service -->
-                <div class="service-card service-normal">
-                    <div class="service-header">
-                        <h3>Normal</h3>
-                        <span class="service-badge">Populer</span>
-                    </div>
-                    <div class="service-timing">
-                        <p class="timing-label">Estimasi Waktu:</p>
-                        <p class="timing-value">4-7 Hari Kerja</p>
-                    </div>
-                    <div class="service-description">
-                        <h4>Layanan Mencakup:</h4>
-                        <ul>
-                            <li>Pengangkutan regular teratur</li>
-                            <li>Handling standar berkualitas</li>
-                            <li>Tracking online tersedia</li>
-                            <li>Asuransi dasar untuk barang</li>
-                            <li>Update status via email</li>
-                            <li>Customer support standar</li>
-                        </ul>
-                    </div>
-                    <button class="btn-service btn-normal">Pilih Layanan</button>
-                </div>
-
-                <!-- Hemat Service -->
-                <div class="service-card service-hemat">
-                    <div class="service-header">
-                        <h3>Hemat</h3>
-                        <span class="service-badge">Ekonomis</span>
-                    </div>
-                    <div class="service-timing">
-                        <p class="timing-label">Estimasi Waktu:</p>
-                        <p class="timing-value">7-14 Hari Kerja</p>
-                    </div>
-                    <div class="service-description">
-                        <h4>Layanan Mencakup:</h4>
-                        <ul>
-                            <li>Pengangkutan reguler terjadwal</li>
-                            <li>Handling dasar standar</li>
-                            <li>Tracking dasartersedia</li>
-                            <li>Perlindungan barang minimal</li>
-                            <li>Update status mingguan</li>
-                            <li>Customer support email</li>
-                        </ul>
-                    </div>
-                    <button class="btn-service btn-hemat">Pilih Layanan</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section" id="faq">
-            <div class="faq-wrapper">
-                <h2>Pertanyaan yang Sering Diajukan</h2>
+        <!-- ==========================================
+             HERO SECTION: KOTAK MELAYANG
+             ========================================== -->
+        <section class="container-fluid max-w-custom mx-auto mb-5">
+            <div class="position-relative rounded-4 overflow-hidden shadow-lg custom-hero-service-box">
+                <!-- Gambar Latar Gudang/Logistik -->
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Distribusi Logistik Global">
                 
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary>Bagaimana cara melacak paket saya?</summary>
-                        <p>Masukkan kode barang di halaman "Lacak Paket" untuk melihat posisi real-time, status pengiriman, dan estimasi waktu tiba. Anda juga akan menerima notifikasi SMS dan email untuk setiap update.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Berapa lama garansi uang kembali jika barang tidak sampai?</summary>
-                        <p>Kami menjamin pengiriman sesuai estimasi waktu. Jika terlambat lebih dari 2 hari kerja, Anda bisa klaim penuh tanpa biaya tambahan dalam 5-7 hari kerja.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Apakah barang diasuransikan?</summary>
-                        <p>Ya. Layanan Super Cepat dan Cepat mencakup asuransi penuh hingga Rp 50.000.000. Layanan Normal dan Hemat memiliki asuransi terbatas. Kami juga menyediakan opsi asuransi tambahan.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Apa yang harus dilakukan jika barang hilang atau rusak?</summary>
-                        <p>Hubungi customer service dengan bukti pengiriman dan foto kondisi paket. Kami akan proses klaim dalam 3-5 hari kerja. Penggantian nilai penuh untuk layanan Super Cepat dan Cepat dijamin dalam 7 hari.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Bisakah membatalkan pengiriman setelah booking?</summary>
-                        <p>Ya, jika belum dijemput kurir. Untuk pembatalan setelah dijemput, dikenakan biaya administratif 10%. Permintaan harus dalam 2 jam setelah booking.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Berapa batas ukuran dan berat barang?</summary>
-                        <p>Maksimal 50 kg dan dimensi 300 cm (panjang + lebar + tinggi). Barang berbahaya seperti cairan dan senjata tidak dapat dikirim sesuai regulasi.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Bagaimana cara menghubungi customer service?</summary>
-                        <p>Telepon: 1500-VLG, Email: support@vargologistics.com, Chat: Aplikasi/Website, WhatsApp: +62 812-3456-7890. Jam operasional: Senin-Jumat 08:00-20:00, Sabtu 08:00-17:00 WIB.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Apakah ada biaya tersembunyi?</summary>
-                        <p>Tidak. Harga yang ditampilkan adalah harga final. Biaya tambahan hanya untuk opsi tambahan seperti asuransi premium atau pickup di lokasi khusus.</p>
-                    </details>
+                <!-- Kotak Teks Melayang -->
+                <div class="position-absolute top-50 start-0 translate-middle-y ms-3 ms-md-5">
+                    <div class="bg-gray-800 p-4 p-md-5 rounded-4 shadow-lg border border-secondary border-opacity-25 overlay-glass" style="max-width: 500px;">
+                        <h2 class="fw-bold mb-4">Layanan Pengiriman Terpadu</h2>
+                        <p class="text-light mb-0" style="line-height: 1.8;">
+                            Kami menghubungkan bisnis Anda dengan dunia. Dari pengiriman kargo instan hingga manajemen rantai pasok kompleks, kami menyediakan berbagai pilihan layanan pengiriman yang dapat disesuaikan dengan kebutuhan, waktu, dan anggaran Anda.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- ==========================================
+             TRACKING SECTION (LACAK PAKET)
+             ========================================== -->
+        <section id="lacak-paket" class="container-fluid max-w-custom mx-auto mb-5 scroll-mt">
+            <div class="bg-gray-800 rounded-4 p-4 p-md-5 shadow-sm border border-secondary border-opacity-25 text-center">
+                <h2 class="fw-bold mb-3">Lacak Paket Anda</h2>
+                <p class="text-secondary mb-4">Masukkan kode barang untuk melacak pengiriman Anda secara real-time</p>
+                
+                <form class="mx-auto" style="max-width: 600px;" action="#" method="POST">
+                    <div class="input-group input-group-lg mb-3 shadow-sm">
+                        <input type="text" class="form-control tracking-input bg-gray-900 border-secondary text-white" id="tracking-code" name="tracking-code" placeholder="Contoh: VL-2026-001234" required aria-label="Kode barang">
+                        <button class="btn btn-warning fw-bold px-4" type="submit">Lacak Paket</button>
+                    </div>
+                    <p class="small text-secondary mt-3">*Cek status pengiriman, lokasi, dan estimasi waktu tiba secara langsung.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- PARAGRAF PENJELASAN TAMBAHAN -->
+        <section class="container-fluid max-w-custom mx-auto mb-5 pb-5 border-bottom border-secondary border-opacity-25">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-lg-9">
+                    <h3 class="fw-bold mb-3">Jaringan Logistik Tanpa Batas</h3>
+                    <p class="text-light fs-6 mb-0" style="line-height: 1.8;">
+                        Didukung oleh jaringan armada global dan pusat distribusi yang sepenuhnya terotomatisasi, sistem layanan kami memastikan setiap paket ditangani dengan standar keamanan tertinggi. Sistem analitik rute presisi kami meminimalkan penundaan transportasi, sehingga barang Anda tiba tepat waktu, di mana pun lokasinya. Kepercayaan Anda adalah prioritas operasional kami.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PILIHAN LAYANAN PENGIRIMAN (GRID CARDS)
+             ========================================== -->
+        <section id="layanan-pengiriman" class="container-fluid max-w-custom mx-auto mb-5 scroll-mt">
+            <h2 class="text-center fw-bold mb-3">Pilih Layanan Pengiriman</h2>
+            <p class="text-center text-secondary mb-5">Kami menyediakan berbagai pilihan layanan sesuai kebutuhan dan budget Anda</p>
+            
+            <div class="row g-4">
+                <!-- Super Cepat -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-gray-800 text-white border-0 rounded-4 h-100 p-4 hover-float">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h4 class="fw-bold text-warning mb-0">Super Cepat</h4>
+                            <span class="badge bg-danger rounded-pill">Tercepat</span>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom border-secondary border-opacity-50">
+                            <p class="text-secondary small mb-1">Estimasi Waktu:</p>
+                            <h5 class="fw-bold mb-0">1-2 Hari Kerja</h5>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold small text-light mb-3">Layanan Mencakup:</h6>
+                            <ul class="text-secondary small ps-3" style="line-height: 1.8;">
+                                <li>Pengangkutan ekspres 24/7</li>
+                                <li>Prioritas handling & loading</li>
+                                <li>Tracking real-time GPS</li>
+                                <li>Asuransi penuh untuk barang</li>
+                                <li>Pengiriman garansi tepat waktu</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-warning w-100 fw-bold mt-3 rounded-3">Pilih Layanan</button>
+                    </div>
+                </div>
+
+                <!-- Cepat -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-gray-800 text-white border-0 rounded-4 h-100 p-4 hover-float">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h4 class="fw-bold mb-0">Cepat</h4>
+                            <span class="badge bg-primary rounded-pill">Standar</span>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom border-secondary border-opacity-50">
+                            <p class="text-secondary small mb-1">Estimasi Waktu:</p>
+                            <h5 class="fw-bold mb-0">2-4 Hari Kerja</h5>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold small text-light mb-3">Layanan Mencakup:</h6>
+                            <ul class="text-secondary small ps-3" style="line-height: 1.8;">
+                                <li>Pengangkutan cepat setiap hari</li>
+                                <li>Handling profesional</li>
+                                <li>Tracking aplikasi & SMS</li>
+                                <li>Asuransi standar tersedia</li>
+                                <li>Notifikasi pengiriman otomatis</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-light w-100 fw-bold mt-3 rounded-3">Pilih Layanan</button>
+                    </div>
+                </div>
+
+                <!-- Normal -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-gray-800 text-white border-0 rounded-4 h-100 p-4 hover-float position-relative border border-warning border-opacity-25">
+                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning text-dark px-3">Paling Laris</div>
+                        <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
+                            <h4 class="fw-bold mb-0">Normal</h4>
+                            <span class="badge bg-success rounded-pill">Populer</span>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom border-secondary border-opacity-50">
+                            <p class="text-secondary small mb-1">Estimasi Waktu:</p>
+                            <h5 class="fw-bold mb-0">4-7 Hari Kerja</h5>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold small text-light mb-3">Layanan Mencakup:</h6>
+                            <ul class="text-secondary small ps-3" style="line-height: 1.8;">
+                                <li>Pengangkutan reguler teratur</li>
+                                <li>Handling standar berkualitas</li>
+                                <li>Tracking online tersedia</li>
+                                <li>Asuransi dasar untuk barang</li>
+                                <li>Update status via email</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-warning text-dark w-100 fw-bold mt-3 rounded-3">Pilih Layanan</button>
+                    </div>
+                </div>
+
+                <!-- Hemat -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-gray-800 text-white border-0 rounded-4 h-100 p-4 hover-float">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h4 class="fw-bold mb-0 text-secondary">Hemat</h4>
+                            <span class="badge bg-secondary rounded-pill">Ekonomis</span>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom border-secondary border-opacity-50">
+                            <p class="text-secondary small mb-1">Estimasi Waktu:</p>
+                            <h5 class="fw-bold mb-0">7-14 Hari Kerja</h5>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold small text-light mb-3">Layanan Mencakup:</h6>
+                            <ul class="text-secondary small ps-3" style="line-height: 1.8;">
+                                <li>Pengangkutan terjadwal</li>
+                                <li>Handling dasar standar</li>
+                                <li>Tracking dasar tersedia</li>
+                                <li>Perlindungan barang minimal</li>
+                                <li>Update status mingguan</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-secondary text-light w-100 fw-bold mt-3 rounded-3">Pilih Layanan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             FAQ SECTION (ACCORDION)
+             ========================================== -->
+        <section id="faq" class="container-fluid max-w-custom mx-auto py-5 scroll-mt">
+            <h2 class="fw-bold text-center mb-5">Pertanyaan yang Sering Diajukan</h2>
+            
+            <!-- Menggunakan Accordion Custom dari file CSS -->
+            <div class="accordion custom-accordion mx-auto" id="accordionFAQ" style="max-width: 900px;">
+                
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                            Bagaimana cara melacak paket saya?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p class="mb-0" style="line-height: 1.8;">Masukkan kode barang di kotak "Lacak Paket" di atas untuk melihat posisi real-time, status pengiriman, dan estimasi waktu tiba. Anda juga akan menerima notifikasi SMS dan email untuk setiap update.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                            Berapa lama garansi uang kembali jika barang tidak sampai?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p class="mb-0" style="line-height: 1.8;">Kami menjamin pengiriman sesuai estimasi waktu. Jika terlambat lebih dari 2 hari kerja, Anda bisa melakukan klaim penuh tanpa biaya tambahan dalam 5-7 hari kerja.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                            Apakah barang diasuransikan?
+                        </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p class="mb-0" style="line-height: 1.8;">Ya. Layanan Super Cepat dan Cepat mencakup asuransi penuh hingga Rp 50.000.000. Layanan Normal dan Hemat memiliki asuransi terbatas. Kami juga menyediakan opsi asuransi tambahan bagi yang membutuhkan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                            Apa yang harus dilakukan jika barang hilang atau rusak?
+                        </button>
+                    </h2>
+                    <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p class="mb-0" style="line-height: 1.8;">Silakan hubungi customer service kami dengan menyertakan bukti pengiriman dan foto kondisi paket. Kami akan memproses klaim dalam 3-5 hari kerja. Penggantian nilai penuh untuk layanan prioritas dijamin dalam waktu maksimal 7 hari.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
+
+    <!-- ==========================================
+         FOOTER SECTION 
+         ========================================== -->
+    <footer class="footer-custom pt-5 pb-4 px-3 px-md-4 border-top border-secondary mt-5">
+        <div class="container-fluid max-w-custom mx-auto">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <p class="text-secondary small mb-0">Halaman terakhir diperbarui: 26 April 2026</p>
+                </div>
+            </div>
+
+            <div class="row mb-5 gy-4">
+                <div class="col-12 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Jelajahi TKK.com</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#" class="footer-link">Strategi Kami</a></li>
+                        <li><a href="#" class="footer-link">Nilai-nilai Perusahaan</a></li>
+                        <li><a href="#" class="footer-link">Target Emisi Nol</a></li>
+                        <li><a href="#" class="footer-link">Kisah Inovasi Manufaktur</a></li>
+                        <li><a href="#" class="footer-link">Catatan Perhatian (Disclaimer)</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Apakah kami bisa membantu?</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#" class="footer-link">Hubungi Kami</a></li>
+                        <li><a href="karier.html" class="footer-link">Pencarian Karier</a></li>
+                        <li><a href="#" class="footer-link">Pusat Bantuan Vendor Global</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Terhubung dengan kami</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer-link d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.487.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                </svg>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row pt-4 border-top border-secondary">
+                <div class="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+                    <div class="d-flex flex-wrap gap-3 gap-md-4">
+                        <a href="#" class="footer-link-small">Aksesibilitas</a>
+                        <a href="#" class="footer-link-small">Syarat dan ketentuan</a>
+                        <a href="#" class="footer-link-small">Pemberitahuan privasi</a>
+                        <a href="#" class="footer-link-small">Kebijakan cookie</a>
+                        <a href="#" class="footer-link-small">Peringatan penipuan</a>
+                        <a href="#" class="footer-link-small">Hubungi kami</a>
+                    </div>
+                    <div>
+                        <a href="#" class="footer-link-small d-flex align-items-center gap-2">
+                            <span class="bg-primary text-white rounded-pill px-2 py-0 small d-flex align-items-center">
+                                <span class="fw-bold" style="font-size: 10px;">✓ X</span>
+                            </span>
+                            Ubah preferensi cookie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap Wajib -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

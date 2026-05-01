@@ -97,6 +97,11 @@ html {
     height: 450px; 
 }
 
+/* Tinggi khusus untuk gambar bagian atas Halaman Layanan */
+.custom-hero-service-box {
+    height: 400px;
+}
+
 /* Menambahkan efek lengkungan hanya di sudut kanan atas untuk kotak teks di atas gambar Hero */
 .rounded-top-end-4 {
     border-top-right-radius: 1rem !important;
@@ -123,6 +128,17 @@ html {
     background-color: rgba(31, 41, 55, 0.9) !important; /* Warna abu-abu gelap dengan transparansi 90% */
     backdrop-filter: blur(12px); /* Memburamkan background gambar yang ada di baliknya */
     border: 1px solid rgba(255, 255, 255, 0.05); /* Garis outline sangat tipis */
+}
+
+/* Kustomisasi Form Input Tracking */
+.tracking-input:focus {
+    background-color: #111827 !important; /* Mencegah input jadi putih saat diklik */
+    color: white !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 209, 0, 0.25) !important; /* Efek glow kuning saat mengetik */
+    border-color: #ffd100 !important;
+}
+.tracking-input::placeholder {
+    color: #6b7280; /* Warna placeholder abu-abu di input tracking */
 }
 
 /* =========================================
@@ -160,7 +176,7 @@ html {
 }
 
 /* =========================================
-   7. TENTANG KAMI - VISI & MISI (ACCORDION)
+   7. TENTANG KAMI & LAYANAN - ACCORDION
    Modifikasi total komponen Accordion menjadi gaya Card Outline
 ========================================= */
 /* Membungkus setiap item accordion ke dalam bentuk kotak (Card) bergaris tepi */
